@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Książka Serwisowa Pojazdu</title>
+    <script src="https://kit.fontawesome.com/d98467416f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="car-info">
+            <div class="car-img"></div>
+            <div class="car-data">
+                <h2>dane pojazdu</h2>
+                <label for="brand">Marka i model:</label>
+                <input type="text" id="brand" placeholder="Podaj markę i model...">
+
+                <label for="year">Rok produkcji:</label>
+                <input type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="4" id="year" placeholder="Rok produkcji...">
+
+                <label for="capacity">Pojemność silnika:</label>
+                <small>(w cm³)</small>
+                <input type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="4" id="capacity" placeholder="Pojemność silnika...">
+
+                <label for="power">Moc silnika:</label>
+                <small>(w KM)</small>
+                <input type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="4" id="power" placeholder="Moc...">
+
+                <label for="engine-type">Typ silnika:</label>
+                <select id="engine-type">
+                    <option value="0" disabled selected>-- Typ silnika --</option>
+                    <option value="1">Benzyna</option>
+                    <option value="1">Benzyna + LPG</option>
+                    <option value="1">Diesel</option>
+                    <option value="1">Hybryda</option>
+                    <option value="1">Elektryczny</option>
+                </select>
+
+                <label for="number-plate">Numer rejestracyjny:</label>
+                <input type="text" maxlength="9" id="number-plate" placeholder="Numer rejestracyjny...">
+
+                <div class="picture">
+                    <label for="car-image">Adres zdjęcia:</label>
+                    <input type="text" id="car-image" value="default.jpg">
+                    <button class="send">Prześlij</button>
+                </div>
+            </div>
+        </div>
+        <div class="car-service">
+            <div class="title">
+                <h1>książka serwisowa pojazdu</h1>
+            </div>
+            <div class="buttons">
+                <button class="add">Dodaj</button>
+                <button class="delete">Usuń wszystko</button>
+                <button class="about-car">Moje auto</button>
+            </div>
+            <section class="services">
+                <table class="srv">
+                    <tr>
+                        <th>Usługa</th>
+                        <th>Data</th>
+                        <th>Koszt</th>
+                        <th>Przebieg</th>
+                        <th>Opis</th>
+                        <th>Usuń</th>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="panel">
+            <div class="panel-title">
+                <h2>Dodaj nową czynność serwisową</h2>
+            </div>
+
+            <label for="name">Nazwa:</label>
+            <small>(podaj nazwę czynności)</small>
+            <input type="text" id="name">
+
+            <label for="date">Data:</label>
+            <small>(podaj datę)</small>
+            <input type="date" id="date">
+
+            <label for="cost">Koszt:</label>
+            <small>(podaj koszt usługi w zł)</small>
+            <input type="number" id="cost">
+
+            <label for="car-course">Przebieg:</label>
+            <small>(podaj aktualny przebieg)</small>
+            <input type="number" id="car-course">
+
+            <label for="dscr">Opis:</label>
+            <small>(podaj opis usługi - opcjonalnie)</small>
+            <textarea id="dscr" placeholder="Opis usługi..."></textarea>
+
+            <div class="panelBtns">
+                <button class="addNew"><i class="fas fa-save"></i> Dodaj</button>
+                <button class="cancel"><i class="fas fa-window-close"></i> Anuluj</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupInfo">
+        <table class="carInfo">
+            <tr>
+                <th>Marka i model</th>
+                <th>Rok produkcji</th>
+                <th>Pojemność silnika</th>
+                <th>Moc silnika</th>
+                <th>Typ silnika</th>
+                <th>Numer rejestracyjny</th>
+            </tr>
+        </table>
+        <div class="infoBtn">
+            <button class="close-popup">Zamknij</button>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

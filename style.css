@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300;400;700&family=Saira+Condensed:wght@300;400;700&display=swap');
+
+/* font-family: 'Changa', sans-serif;
+font-family: 'Saira Condensed', sans-serif; */
+
+body {
+    min-height: 100vh;
+    font-family: 'Changa', sans-serif;
+    background-image: linear-gradient(314deg, rgb(228, 152, 39) 0%, rgb(59, 179, 169) 100%);
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.car-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    width: 400px;
+}
+
+.car-img {
+    height: 130px;
+    width: 100%;
+    background-image: url(default.jpg);
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.car-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(314deg, rgb(22, 22, 53) 0%, rgb(59, 59, 59) 100%);
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.car-data h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+}
+
+.car-data label,
+.car-data small {
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.car-data small {
+    font-size: 10px;
+    margin-top: -5px;
+}
+
+.car-data input,
+.car-data select {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.picture {
+    margin: 30px auto;
+}
+
+.picture input {
+    width: 150px;
+}
+
+.send {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.send:hover {
+    background-color: rgb(187, 186, 186);
+}
+
+
+.car-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 900px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 5px;
+    min-height: 700px;
+}
+
+.title {
+    background-image: linear-gradient(314deg, rgb(22, 22, 53) 0%, rgb(59, 59, 59) 100%);
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.add,
+.delete,
+.about-car {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(21, 21, 44);
+    color: white;
+    margin-right: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.add:hover,
+.delete:hover,
+.about-car:hover {
+    background-color: rgb(37, 37, 80);
+}
+
+
+.services {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table.srv {
+    margin-top: 20px;
+}
+
+table.srv th {
+    font-size: 18px;
+}
+
+table.srv td {
+    font-size: 12px;
+}
+
+table.srv td:last-child {
+    border: none;
+}
+
+table.srv th,
+table.srv td {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    width: 150px;
+    text-align: center;
+}
+
+.fa-times {
+    font-size: 14px;
+}
+
+.remove {
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: orangered;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.remove:hover {
+    background-color: rgb(238, 56, 56);
+}
+
+.del {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.panel {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+}
+
+.panel h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.panel label {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.panel small {
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.panel textarea,
+.panel input {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.panel button {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color .3s;
+    margin-right: 20px;
+}
+
+.panel button:hover {
+    background-color: rgb(34, 34, 63);
+}
+
+.popupInfo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    min-height: 300px;
+    background-image: linear-gradient(314deg, rgb(0, 255, 242) 0%, rgb(58, 60, 223) 100%);
+    /* background-image: linear-gradient(314deg, cyan 0%, orange 100%); */
+    border-radius: 5px;
+}
+
+.carInfo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carInfo th,
+.carInfo td {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-right: 1px dotted black;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+}
+
+.carInfo td {
+    border: none;
+}
+
+.infoBtn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close-popup {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(21, 21, 44);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.close-popup:hover {
+    background-color: rgb(49, 49, 80);
+}
